@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <title>This is a special page for special person</title>
+</head>
+<body>
+
+
+<div class="fa-3x background-container" id="background-container">
+    <!--        <i class="fa-solid fa-heart fa-beat" style="&#45;&#45;fa-beat-scale: 2.0;"></i>-->
+</div>
+<section>
+    <div class="top-half" id="background">
+        <script>
+
+            var images = ['../images/a1.jpg', '../images/a2.jpg'];
+            var index = 0;
+            setInterval(function () {
+                document.getElementById('background').style.backgroundImage = 'url(' + images[index] + ')';
+                index = (index + 1) % images.length;
+            }, 5000); // change image every 5000 milliseconds (5 seconds)
+        </script>
+        </div>
+
+<div class="message">HAPPY BIRTHDAY CHRISTINA!</div><br><br>
+
+<div>
+    <article>
+            You are turning 19! Wow I have been being your older sister for 19 years.
+            Thank you for everything you have done for me<br>
+            You have been by my side when I was old but not mature enough, you don't hate me when I bullied you a lot in the past (don't you dare), I am sorry I was not a best mature sister at the time.<br>
+            You have been by my side when I was down<br>
+            You have been by my side to make me laugh and angry at the same time.<br>
+            I will never forget time we have spent together especially tough time.<br>
+            I hate that I am older than you a lot that makes a gap where I already forgot how to do the math where u were learning it! I hate that I am not a super intelligent and was not able to help you sometimes!<br>
+            But I love you, you will always be my little sister, I will continue eating your snack and tease you! That is fun!<br>
+            Anyway, I am so proud of you!<br>
+            I wish you the best in your journey! Got into the internship/job you want<br>
+            I wish that you can acchive whatever you want!<br>
+            But I also hope you can start eating vegie because vegie is very important to your body, also exercie when you are free!<br>
+
+    </article>
+</div>
+
+</section>
+
+<script>
+    function createBackground() {
+      const container = document.getElementById('background-container');
+      const containerWidth = container.offsetWidth;
+      const containerHeight = container.offsetHeight;
+      const divSize = 90;
+      const spacing = 10;
+
+      for (let y = 0; y < containerHeight; y += divSize + spacing) {
+        for (let x = 0; x < containerWidth; x += divSize + spacing) {
+          const div = document.createElement('div');
+          div.className = 'background-div';
+          div.style.left = `${x}px`;
+          div.style.top = `${y}px`;
+
+          const icon = document.createElement('i');
+          icon.className = 'fa-solid fa-heart fa-beat';
+          icon.style.setProperty('--fa-beat-scale', '1.2');
+          div.appendChild(icon);
+
+          container.appendChild(div);
+        }
+      }
+    }
+
+    window.onload = createBackground;
+    window.onresize = () => {
+      const container = document.getElementById('background-container');
+      container.innerHTML = '';
+      createBackground();
+    };
+
+
+</script>
+
+
+</body>
+</html>

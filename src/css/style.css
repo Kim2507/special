@@ -1,7 +1,10 @@
 body {
     display: flex;
     font-family: Arial, sans-serif;
-    background: linear-gradient(45deg, #f06, #f90, #06f, #90f);
+    /* background-color: #FBAB7E; */
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+
+    /* background: white; */
     /*background-size: 100% 100%;*/
     align-items: center;
     height: 100vh;
@@ -14,32 +17,20 @@ body, html {
   overflow: hidden;
 }
 
-
-/*@keyframes gradient {
-    0% {
-        background-position: 0% 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0% 50%;
-    }
-}*/
-
 .background{
     color: #999999;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
 }
 
-section{
-    position:absolute;
-    z-index:5;
 
-}
+
+.container {
+    display: flex;
+    width: 100%;
+  }
+
 
 .background-div {
       width: 90px; /* Adjust size according to the icon size */
@@ -53,13 +44,98 @@ section{
   font-size: 40px; /* Adjust font size as needed */
 }
 
+section{
+    /* border: 2px solid black; */
+    /* display: inline-block; */
+    position:absolute;
+    background-color: hsl(75, 49%, 47%);
+    align-items: center; /* Center items vertically */
+    margin: 0 auto; /* Center the section horizontally */
+    gap: 10px; /* Add a gap of 10px between the items **/
+}
 
-.message, article, button {
+.grid-container {
+
+    display: grid;
+    grid-template-columns: 50% 50%;
+    background-color: transparent;
+    padding: 10px;
+    gap: 10px;
+    z-index : 4;
+    max-width: 100%;
+  }
+
+.grid-photos{
+    display: grid;
+    grid-template-rows: auto auto;
+    border-radius: 8%;
+}
+
+
+.message {
+    flex-wrap: wrap;
+    max-width: 100%;
     margin-left: 20px;
     font-size: 24px;
-    color: #fff;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    color: solid black;
+    margin-right: 10px;
+
 }
+
+#message{
+    padding: 10px;
+    background-image: radial-gradient( circle 369px at -2.9% 12.9%,  rgba(247,234,163,1) 0%, rgba(236,180,238,0.56) 46.4%, rgba(163,203,247,1) 100.7% );
+}
+.slideshow {
+    flex:5;
+    text-align: center;
+    /* border: solid red; */
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-width: 95%; 
+    height: 500px;  
+    margin: auto;
+    overflow: hidden;
+    
+
+    /* flex: 1;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: right;
+    position: relative;
+    height: 400px;
+    max-width: 100%; */
+    
+}
+
+.slideshow img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-fit: contain;
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10%;
+}
+ 
+
+.slideshow img.active {
+    display:block;
+}
+
+article{
+    display: flex;
+    max-width: 100%;
+    /* border: solid black; */
+    font-size: medium;
+    padding-bottom: 10px;
+}
+
+
 
 /* Style for large screens */
 @media screen and (min-width: 1200px) {
@@ -94,12 +170,13 @@ section{
         border: 2px solid black; /
 }*/
 
-section{
-    border: 2px solid black;
-}
 
-.fa-3x{
+
+
+
+.fa-3x , .background-container{
     color: red;
+    z-index : 1;
 }
 
 .fa-solid fa-heart{
@@ -108,9 +185,26 @@ section{
 
 
 .background-container{
-    position: relative;
-       width: 100%;
-          height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Ensure it is behind other elements */
+    pointer-events: none; /* Make it non-interactive */
+}
+
+
+.navigation {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.navigation button {
+    padding: 10px 20px;
+    margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
 }
 
 

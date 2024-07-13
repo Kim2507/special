@@ -8,7 +8,8 @@ body {
     /*background-size: 100% 100%;*/
     align-items: center;
     height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 body, html {
@@ -159,6 +160,24 @@ article{
         font-size: 14px;
     }
     /* Add your styles for small screens here */
+}
+
+/* Media query for iPhone and small screens */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    #slideshow {
+        width: 100%;
+        padding: 10px;
+    }
 }
 
 /*.top-half {

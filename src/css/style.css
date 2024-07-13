@@ -56,7 +56,6 @@ section{
 }
 
 .grid-container {
-
     display: grid;
     grid-template-columns: 50% 50%;
     background-color: transparent;
@@ -167,6 +166,7 @@ article{
     body {
         flex-direction: column;
         padding: 10px;
+        font-size: smaller;
     }
 
     .container {
@@ -178,6 +178,17 @@ article{
         width: 100%;
         padding: 10px;
     }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 40% 60%;
+        background-color: transparent;
+        padding: 10px;
+        gap: 10px;
+        z-index : 4;
+        max-width: 100%;
+        overflow-y: scroll;
+      }
 }
 
 /*.top-half {

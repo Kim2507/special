@@ -86,26 +86,28 @@ section{
     } */
 
     #slideshow {
+        /* border: dotted pink; */
+        max-height: 400px;
         width: 100%;
         padding: 10px;
     }
 
     .slideshow img {
         max-width: 100%;
-        max-height: auto;
+        max-height: 400px;
         object-fit: cover; 
         object-fit: contain;
         display: none;
         position: absolute;
         top: 0;
         left: 0;
-        border-radius: 10%;
+        border-radius: 15%;
     }
 
     .grid-container {
         display: grid;
         grid-template-columns: none;
-        grid-template-rows: 40% 60%;
+        grid-template-rows: 60% 40%;
         background-color: transparent;
         padding: 10px;
         gap: 10px;
@@ -120,9 +122,10 @@ section{
         grid-template-rows: auto auto;
         border-radius: 8%;
         font-size: 2vw;
-        max-width: 600px;  /* Adjust max-width as needed */
-        height: 100%;
-        width: 100%;
+        /* max-width: 600px;  
+        max-height: 600px; */
+        /* height: 100%;
+        width: 100%; */
     }
 
     article{

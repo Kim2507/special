@@ -59,7 +59,7 @@ section{
 
 .grid-container {
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 40%;
     background-color: transparent;
     padding: 10px;
     gap: 10px;

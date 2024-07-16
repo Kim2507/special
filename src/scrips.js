@@ -103,3 +103,10 @@ function createBackground() {
     container.innerHTML = '';
     createBackground();
   };
+
+  function changeText() {
+    var button = document.getElementById('giftButton');
+    button.innerHTML = 'arrived but not wrapped up yet <:)';
+    button.classList.add('giftText');
+    button.disabled = true;
+}

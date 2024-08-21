@@ -59,7 +59,7 @@ section{
 
 .grid-container {
     display: grid;
-    grid-template-columns: 40% 40%;
+    grid-template-columns: 50% 40%;
     background-color: transparent;
     padding: 10px;
     gap: 10px;
@@ -71,6 +71,7 @@ section{
     display: grid;
     grid-template-rows: auto auto;
     border-radius: 8%;
+    max-width: 100%;
 }
 
 @media (max-width:600px) and (orientation: portrait) {
@@ -94,7 +95,7 @@ section{
 
     .slideshow img {
         width: 400px;
-        height: 600px;
+        /* height: 500px; */
         max-width: 100%;
         max-height: 400px;
         object-fit: cover; 
@@ -193,13 +194,16 @@ section{
 
 
 .message {
+    align-self: center;
     flex-wrap: wrap;
     max-width: 100%;
+    max-height: 80%;
     margin-left: 20px;
     font-size: 24px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     color: solid black;
     margin-right: 10px;
+    margin-bottom: 20px;
 
 }
 
@@ -347,5 +351,10 @@ article{
 .giftText{
     color:brown;
 }
+
+/* text{
+    padding-bottom: 20px;
+
+} */
 
 
